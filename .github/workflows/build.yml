@@ -28,7 +28,7 @@ jobs:
 
       - name: Testar e compilar APK
         working-directory: extracted/SoftAimCore-v2.1
-        run: gradle --no-daemon testDebugUnitTest assembleDebug
+        run: gradle -Pandroid.useAndroidX=true --no-daemon testDebugUnitTest assembleDebug
 
       - uses: actions/upload-artifact@v4
         with:
